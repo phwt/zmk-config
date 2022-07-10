@@ -9,45 +9,42 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF 0
-#define SYM 1
-#define ADJ 2
+#define NAV 1
+#define TYP 2
+#define ADJ 3
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  GUI |   ~  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  [   | GUI/] |
-//        | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |CTRL/'|
-//        | LALT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | RALT |
-//                           | RSE | SPC | SYM |   | SYM | BKSP | RSE |
                         bindings = <
     &kp GRAVE   &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp LBKT    &kp RBKT
                 &kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
                 &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
-                                                    &kp LGUI    &kp SPACE   &kp LCTRL           &sl SYM     &kp ENTER   &kp BSPC
+                                                    &kp LGUI    &kp SPACE   &sl NAV             &sl TYP     &kp ENTER   &kp BSPC
                         >;
                 };
-                symbol_layer {
-// -----------------------------------------------------------------------------------------
-// |     |  _  |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |
-//       |  +  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
-//       |  =  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+
+                navigation_layer {
                         bindings = <
-    &trans      &kp TAB     &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT           &kp CARET   &kp AMPS    &kp STAR    &kp LPAR    &kp RPAR    &kp MINUS    &kp EQUAL
-                &kp ESC     &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &kp N5              &kp N6      &sk RSHFT   &sk RGUI    &sk RALT    &sk RCTRL      &trans
-                &kp F1      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &trans
-                                                    &kp LGUI    &kp SPACE   &kp LCTRL           &sl SYM     &kp ENTER   &mo ADJ
+    &trans      &trans      &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT           &kp CARET   &kp AMPS    &kp STAR    &kp LPAR    &kp RPAR    &trans    &trans
+                &trans      &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &trans              &trans      &kp LEFT    &kp UP      &kp RIGHT   &trans      &trans
+                &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &kp DOWN    &trans      &trans      &trans
+                                                    &trans      &trans      &to DEF             &mo ADJ     &trans      &trans
                         >;
                 };
+
+                type_layer {
+                        bindings = <
+    &trans      &trans      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS    &kp EQUAL
+                &trans      &trans      &trans      &trans      &trans      &trans              &trans      &sk RSHFT   &sk RGUI    &sk RALT    &sk RCTRL   &trans
+                &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans
+                                                    &trans      &trans      &mo ADJ             &to DEF     &trans      &trans
+                        >;
+                };
+
                 adjust_layer {
-// -----------------------------------------------------------------------------------------
-// | RST | BLDR |     |     |     |     |     |   |     |     |     |     |     | BLDR | RST |
-//       | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   | BT4 | BT3 | BT2 | BT1 | BT0 | BTCLR|
-//       |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                          |     |     |     |   |     |     |     |
                         bindings = <
    &reset &bootloader  &none        &none        &none        &none        &none              &none        &none        &none        &none        &none         &bootloader &reset
           &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR
