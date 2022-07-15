@@ -18,6 +18,21 @@
 #define BRIU C_BRI_UP
 
 / {
+        macros {
+            ZMK_MACRO(mlock,
+            bindings = 
+                <&macro_press &kp LGUI &kp LCTRL>,
+                <&macro_tap &kp Q>,
+                <&macro_release &kp LGUI &kp LCTRL>;
+            )
+            ZMK_MACRO(mlang,
+            bindings = 
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp SPACE>,
+                <&macro_release &kp LALT>;
+            )
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -32,10 +47,10 @@
 
                 navigation_layer {
                         bindings = <
-    &trans      &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp BRID    &kp BRIU            &trans      &kp HOME    &kp UP      &kp END     &trans      &trans      &trans
+    &trans      &mlock      &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp BRID    &kp BRIU            &trans      &kp HOME    &kp UP      &kp END     &trans      &trans      &trans
                 &trans      &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &trans              &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans      &trans
                 &kp F12     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp F11
-                                                    &trans      &mo ADJ     &to DEF             &trans     &trans      &kp DEL
+                                                    &trans      &mo ADJ     &to DEF             &mlang      &trans      &kp DEL
                         >;
                 };
 
