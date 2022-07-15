@@ -20,16 +20,20 @@
 / {
         macros {
             ZMK_MACRO(mlock,
-            bindings = 
-                <&macro_press &kp LGUI &kp LCTRL>,
-                <&macro_tap &kp Q>,
-                <&macro_release &kp LGUI &kp LCTRL>;
+                wait-ms = <10>;
+                tap-ms = <10>;
+                bindings = 
+                    <&macro_press &kp LGUI &kp LCTRL>,
+                    <&macro_tap &kp Q>,
+                    <&macro_release &kp LGUI &kp LCTRL>;
             )
             ZMK_MACRO(mlang,
-            bindings = 
-                <&macro_press &kp LALT>,
-                <&macro_tap &kp SPACE>,
-                <&macro_release &kp LALT>;
+                wait-ms = <25>;
+                tap-ms = <25>;
+                bindings = 
+                    <&macro_press &kp LALT>,
+                    <&macro_tap &kp SPACE>,
+                    <&macro_release &kp LALT>;
             )
         };
 
