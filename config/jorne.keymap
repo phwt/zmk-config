@@ -58,8 +58,8 @@
                 type_layer {
                         bindings = <
     &trans      &mlock      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS   &kp EQUAL
-                &trans      &sk LSHFT   &sk LCTRL   &sk LALT    &sk LGUI    &trans              &kp BRIU    &kp LEFT    &kp UP      &kp RIGHT   &trans      &trans
-                &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans      &trans              &kp BRID    &kp HOME    &kp DOWN    &kp END     &trans      &trans
+                &trans      &sk LSHFT   &sk LCTRL   &sk LALT    &sk LGUI    &trans              &kp BRIU    &kp HOME    &kp UP      &kp END     &trans      &trans
+                &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans      &trans              &kp BRID    &kp LEFT    &kp DOWN    &kp RIGHT   &trans      &trans
                                                     &trans      &sl FNC     &trans              &to DEF     &trans      &kp DEL
                         >;
                 };
