@@ -30,10 +30,7 @@
             ZMK_MACRO(marr, // Arrow function
                 wait-ms = <10>;
                 tap-ms = <10>;
-                bindings = 
-                    <&kp LPAR &kp RPAR &kp SPACE>,
-                    <&kp EQUAL &kp GT &kp SPACE>,
-                    <&kp LBRC &kp RBRC>;
+                bindings = <&kp SPACE &kp EQUAL &kp GT &kp SPACE>;
             )
             ZMK_MACRO(mvbh, // Vim blackhole register
                 wait-ms = <10>;
@@ -49,9 +46,9 @@
                 key-positions = <39 40>;
                 bindings = <&kp LA(SPACE)>;
             };
-            combo_term { // LSHFT+GRAVE to trigger terminal (LCTRL+GRAVE)
+            combo_term { // LALT+GRAVE to trigger terminal (LCTRL+GRAVE)
                 timeout-ms = <150>;
-                key-positions = <0 26>;
+                key-positions = <0 40>;
                 bindings = <&kp LC(GRAVE)>;
             };
             combo_adj {
@@ -66,10 +63,10 @@
 
                 default_layer {
                         bindings = <
-&mt LCTRL GRAVE &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp LBKT    &kp RBKT
-                &kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
-                &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
-                                                    &kp LGUI    &kp SPACE   &kp LALT            &kp ENTER   &sl TYP     &kp BSPC
+    &kp GRAVE   &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp LBKT    &kp RBKT
+           &mt LCTRL ESC    &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
+                &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSPC
+                                                    &kp LGUI    &kp SPACE   &kp LALT            &mo TYP     &kp ENTER   &kp RGUI
                         >;
                 };
 
@@ -77,15 +74,15 @@
                         bindings = <
     &trans      &mlock      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS   &kp EQUAL
                 &kp CARET   &kp LBKT    &kp RBKT    &kp LBRC    &kp RBRC    &kp PLUS            &kp UNDER   &kp LEFT    &kp UP      &kp RIGHT   &trans      &kp DLLR
-                &trans      &trans      &trans      &kp LPRN    &kp RPRN    &kp MINUS           &kp EQUAL   &kp HOME    &kp DOWN    &kp END     &trans      &trans
-                                                    &trans      &sl FNC     &trans              &sk RGUI    &to DEF     &kp DEL
+                &trans      &kp PIPE    &kp BSLH    &kp LPRN    &kp RPRN    &kp MINUS           &kp EQUAL   &kp HOME    &kp DOWN    &kp END     &trans      &kp DEL
+                                                    &trans      &sl FNC     &trans              &trans      &trans      &trans
                         >;
                 };
 
                 function_layer {
                         bindings = <
     &trans      &trans      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12
-                &trans      &marr       &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &mvbh
+                &trans      &marr       &trans      &trans      &kp LC(F)   &kp LC(G)           &trans      &trans      &trans      &trans      &trans      &mvbh
                 &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp BRID    &kp BRIU            &trans      &trans      &trans      &trans      &trans      &trans
                                                     &trans      &trans      &trans              &trans      &trans      &trans
                         >;
