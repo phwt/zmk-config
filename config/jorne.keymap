@@ -72,9 +72,9 @@
 
                 type_layer {
                         bindings = <
-    &trans      &mlock      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS   &kp EQUAL
+    &trans      &mlock      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS    &kp EQUAL 
                 &kp CARET   &kp LBKT    &kp RBKT    &kp LBRC    &kp RBRC    &kp PLUS            &kp UNDER   &kp LEFT    &kp UP      &kp RIGHT   &trans      &kp DLLR
-                &trans      &kp PIPE    &kp BSLH    &kp LPRN    &kp RPRN    &kp MINUS           &kp EQUAL   &kp HOME    &kp DOWN    &kp END     &trans      &kp DEL
+                &trans      &kp PIPE    &kp BSLH    &kp LPRN    &kp RPRN    &kp MINUS           &kp EQUAL   &kp SQT     &kp DOWN    &kp P       &trans      &kp DEL
                                                     &trans      &sl FNC     &trans              &trans      &trans      &trans
                         >;
                 };
