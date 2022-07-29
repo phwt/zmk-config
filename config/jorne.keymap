@@ -53,7 +53,7 @@
             };
             combo_term { // SPACE+GRAVE to trigger terminal (LCTRL+GRAVE)
                 timeout-ms = <200>;
-                key-positions = <0 39>;
+                key-positions = <14 39>;
                 bindings = <&kp LC(GRAVE)>;
             };
             combo_adj {
