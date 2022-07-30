@@ -5,7 +5,7 @@ Keymap for [Jorne](https://github.com/joric/jorne) ([Corne](https://github.com/f
 ## Features
 
 - No [home-row mod](https://precondition.github.io/home-row-mods) usage, all mods are accessible without the help of mod-tap or layers.
-  - With the exception of rarely used <key>Ctrl</key> (in macOS) being in mod-tap with <key>ESC</key>.
+  - With the exception of rarely used <kbd>Ctrl</kbd> (in macOS) being in mod-tap with <kbd>ESC</kbd>.
 - Layers:
   - Type layer:
     - Move symbols closer to the middle because even though Jorne have enough space for the brackets and curly braces I still struggle to press them because of my weak right pinky.
@@ -19,7 +19,7 @@ Keymap for [Jorne](https://github.com/joric/jorne) ([Corne](https://github.com/f
 
 Things that I still found unpleasant about this keymap.
 
-- Uncomfortable <key>Backspace</key> key placement.
-- <key>Alt</key> key too far for thumb in some combinations.
-- Redundant <key>Right-⌘</key> which is exclusively used for app switching with [rcmd](https://lowtechguys.com/rcmd/)
+- Uncomfortable <kbd>Backspace</kbd> key placement.
+- <kbd>Alt</kbd> key too far for thumb in some combinations.
+- Redundant <kbd>Right-⌘</kbd> which is exclusively used for app switching with [rcmd](https://lowtechguys.com/rcmd/)
 - _And many more..._
